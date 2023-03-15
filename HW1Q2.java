@@ -26,3 +26,36 @@ public class VowelConsonantCounter {
         System.out.println("The number of consonants is " + consonantCount);
     }
 }
+*//
+    import java.util.Scanner;
+
+public class VowelConsonantCounter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String inputString = scanner.nextLine().toLowerCase(); // convert to lowercase for easier comparison
+
+        int vowelCount = 0;
+        int consonantCount = 0;
+        int i = 0;
+
+        while (i < inputString.length()) {
+            String currentChar = inputString.substring(i, i+1);
+
+            if (currentChar.matches("[a-z]")) { // check if the character is a letter
+                if (currentChar.matches("[aeiou]")) {
+                    vowelCount++;
+                } else {
+                    consonantCount++;
+                }
+            }
+
+            i++;
+        }
+
+        System.out.println("The number of vowels is " + vowelCount);
+        System.out.println("The number of consonants is " + consonantCount);
+    }
+}
+*//
